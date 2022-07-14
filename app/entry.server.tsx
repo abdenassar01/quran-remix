@@ -1,6 +1,8 @@
 import type { EntryContext } from "@remix-run/node";
 import { RemixServer } from "@remix-run/react";
 import { renderToString } from "react-dom/server";
+import { ServerStyleSheet } from "styled-components";
+import Globals from "./utils/Globals";
 
 export default function handleRequest(
   request: Request,
@@ -8,10 +10,24 @@ export default function handleRequest(
   responseHeaders: Headers,
   remixContext: EntryContext
 ) {
+
+  const sheet = new ServerStyleSheet();
+
   let markup = renderToString(
-    <RemixServer context={remixContext} url={request.url} />
+    sheet.collectStyles(
+      <>
+        <RemixServer
+          context={ remixContext }
+          url={ request.url }
+        />
+        <Globals /> 
+      </>
+      
+    )
   );
 
+  const styles = sheet.getStyleTags();
+  markup = markup.replace("__STYLES__", styles);
   responseHeaders.set("Content-Type", "text/html");
 
   return new Response("<!DOCTYPE html>" + markup, {
