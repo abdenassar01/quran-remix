@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { GlobalStyle } from "./utils/Globals";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -23,12 +24,14 @@ export default function App() {
         {
           typeof document === "undefined" ? "__STYLES__" : null
         }
+        <link rel="icon" href="https://i.imgur.com/8ps4plI.png" type="image/gif" sizes="20x20" />
       </head>
       <body>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <GlobalStyle />
       </body>
     </html>
   );
