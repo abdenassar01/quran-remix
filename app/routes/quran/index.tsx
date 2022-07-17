@@ -1,11 +1,18 @@
-import NavBar from "~/components/navlink/NavBar"
+import { CentredContent, CurvedLinkElement, HeadContent, 
+  Heading, LinkElement, LinksWrapper, PageWrapper 
+} from "~/styles/Home";
 
 const Quran = () => {
   return (
-    <div>
-        <NavBar />
-        index
-    </div>
+    <CentredContent>
+      <HeadContent>
+        <Heading>بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</Heading>
+        <LinksWrapper>
+          <CurvedLinkElement>Surah</CurvedLinkElement>
+          <LinkElement>Juz</LinkElement>
+        </LinksWrapper>
+      </HeadContent>
+    </CentredContent>   
   )
 }
 

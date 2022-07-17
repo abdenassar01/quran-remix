@@ -1,10 +1,8 @@
-import NavBar from "~/components/navlink/NavBar"
 
 const Sunnah = () => {
   return (
     <div>
-        <NavBar />
-        index
+      index
     </div>
   )
 }

@@ -27,11 +27,11 @@ export default function App() {
         <link rel="icon" href="https://i.imgur.com/8ps4plI.png" type="image/gif" sizes="20x20" />
       </head>
       <body>
+      <GlobalStyle />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
-        <GlobalStyle />
+        <LiveReload /> 
       </body>
     </html>
   );

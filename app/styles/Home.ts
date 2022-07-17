@@ -1,5 +1,6 @@
 import { MAINCOLOR } from '~/utils/colors';
 import styled from "styled-components";
+import { NavLink } from '@remix-run/react';
 
 export const PageWrapper = styled("div")`
     width: 100%;
@@ -17,10 +18,54 @@ export const CentredContent = styled("main")`
 `
 
 export const HeadContent = styled("section")`
-    padding-top: 100px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 `
 
 export const Heading = styled("h2")`
     color: ${MAINCOLOR};
     font-size: 30px;
 `
+
+
+export const LinksWrapper = styled("div")`
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 5px;
+    width: 320px;
+`
+
+export const LinkElement = styled("button")`
+    padding: 10px 70px;
+    padding-left: 85px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: ${ MAINCOLOR };
+    transition: all .3s ease-in;
+    position: absolute;
+    right: 0;
+
+    &:hover{
+        background-color: ${ MAINCOLOR };
+        color: white;
+    }
+`
+
+export const CurvedLinkElement = styled(LinkElement)`
+    border-radius: 5px 5px 200px 5px;
+    padding-left: 70px;
+    position: absolute;
+    width: fit-content;
+    left: 0;
+    z-index: 2;
+`   
