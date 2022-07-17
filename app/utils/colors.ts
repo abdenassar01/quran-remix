@@ -1,0 +1,1 @@
+export const MAINCOLOR: string = "#293462";

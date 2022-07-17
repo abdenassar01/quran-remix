@@ -1,10 +1,15 @@
 import NavBar from "~/components/navlink/NavBar"
+import { CentredContent, HeadContent, Heading, PageWrapper } from "~/styles/Home";
 
 export default function Index()  {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+    <PageWrapper >
       <NavBar />
-      <h1>Hello Remix</h1>
-    </div>
+      <CentredContent>
+        <HeadContent>
+          <Heading>بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</Heading>
+        </HeadContent>
+      </CentredContent>   
+    </PageWrapper>
   );
 }
