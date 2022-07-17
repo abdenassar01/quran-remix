@@ -22,7 +22,8 @@ export default function handleRequest(
   );
 
   const styles = sheet.getStyleTags();
-  // markup = markup.replace("__STYLES__", styles);
+
+  //markup = markup.replace("__STYLES__", styles);
   
   responseHeaders.set("Content-Type", "text/html");
 

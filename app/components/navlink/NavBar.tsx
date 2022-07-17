@@ -6,7 +6,7 @@ const NavBar = () => {
   
   return (
     <Header>
-      <LogoWrapper>
+      <LogoWrapper to='/'>
         <Logo src="https://i.imgur.com/WzmrQug.png" />
         <Heading>Muslim</Heading> 
       </LogoWrapper>

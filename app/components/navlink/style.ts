@@ -10,11 +10,12 @@ export const Header = styled.header`
     padding: 0 50px;
 `
 
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled(NavLink)`
     display: flex;
     justify-content: space-between;
     width: fit-content;
     align-items: center;
+    text-decoration: none;
 `
 
 export const Logo = styled.img`
