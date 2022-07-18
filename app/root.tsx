@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import NavBar from "./components/navlink/NavBar";
 import { GlobalStyle } from "./utils/Globals";
 
 export const meta: MetaFunction = () => ({
@@ -21,13 +22,14 @@ export default function App() {
       <head>
         <Meta />
         <Links />
-        {
-          typeof document === "undefined" ? "__STYLES__" : null
-        }
+          {
+            typeof document === "undefined" ? "__STYLES__" : null
+          }
         <link rel="icon" href="https://i.imgur.com/8ps4plI.png" type="image/gif" sizes="20x20" />
       </head>
       <body>
-      <GlobalStyle />
+        <GlobalStyle />
+        <NavBar />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

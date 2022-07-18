@@ -3,8 +3,7 @@ import NavBar from "~/components/navlink/NavBar"
 const About = () => {
   return (
     <div>
-        <NavBar />
-        about
+      created by abdenassar
     </div>
   )
 }

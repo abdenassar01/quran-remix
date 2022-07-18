@@ -21,13 +21,13 @@ export default function handleRequest(
     )
   );
 
-  const styles = sheet.getStyleTags();
+  const styles: string = sheet.getStyleTags();
 
-  //markup = markup.replace("__STYLES__", styles);
+  // markup =  markup.replace("__STYLES__", styles);
   
   responseHeaders.set("Content-Type", "text/html");
 
-  return new Response("<!DOCTYPE html>" + markup, {
+  return new Response(`<!DOCTYPE html>` + markup, {
     status: responseStatusCode,
     headers: responseHeaders,
   });

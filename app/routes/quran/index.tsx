@@ -5,13 +5,7 @@ import { CentredContent, CurvedLinkElement, HeadContent,
 const Quran = () => {
   return (
     <CentredContent>
-      <HeadContent>
-        <Heading>بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</Heading>
-        <LinksWrapper>
-          <CurvedLinkElement>Surah</CurvedLinkElement>
-          <LinkElement>Juz</LinkElement>
-        </LinksWrapper>
-      </HeadContent>
+     <h1>Hello World</h1>
     </CentredContent>   
   )
 }

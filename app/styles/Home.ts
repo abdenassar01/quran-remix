@@ -29,13 +29,12 @@ export const Heading = styled("h2")`
     font-size: 30px;
 `
 
-
 export const LinksWrapper = styled("div")`
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
     position: relative;
-    border-radius: 5px;
+    border-radius: 50px;
     width: 320px;
 `
 
@@ -45,7 +44,7 @@ export const LinkElement = styled("button")`
     border: none;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
     background-color: #D9D9D9;
     font-weight: bold;
     font-size: 20px;
@@ -62,7 +61,10 @@ export const LinkElement = styled("button")`
 `
 
 export const CurvedLinkElement = styled(LinkElement)`
-    border-radius: 5px 5px 200px 5px;
+    border-end-end-radius: 200px;
+    border-start-end-radius: 0px;
+    border-start-start-radius: 50px;
+    border-end-start-radius: 50px;
     padding-left: 70px;
     position: absolute;
     width: fit-content;
