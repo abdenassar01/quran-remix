@@ -1,4 +1,4 @@
-import { Outlet } from "@remix-run/react";
+import NavBar from "~/components/navlink/NavBar";
 import { CentredContent, PageWrapper, CurvedLinkElement, HeadContent, 
   Heading, LinkElement, LinksWrapper 
 } from "~/styles/Home";
@@ -14,7 +14,6 @@ export default function Index()  {
             <LinkElement>Juz</LinkElement>
           </LinksWrapper>
         </HeadContent>
-        <Outlet />
       </CentredContent>   
     </PageWrapper>
   );
